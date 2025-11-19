@@ -1,10 +1,9 @@
 import { createApp } from 'vue'
 import './style.css'
-// import App from './App.vue'
 import DefaultComponent from "./components/DefaultComponent.vue";
+import router from "./router";
 
-createApp(DefaultComponent).mount('#app')
 
-// const app = createApp({});
-// app.component('default-component', DefaultComponent);
-// app.mount('#app');
+const app = createApp(DefaultComponent);
+app.use(router);
+app.mount('#app');
