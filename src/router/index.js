@@ -1,16 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeComponent from "../components/frontend/HomeComponent.vue";
+import HomeComponent from "../components/frontend/home/HomeComponent.vue";
+import frontendRoutes from "./modules/frontendRoutes";
 
 const baseRoutes = [
     {
-        path: "/home",
+        path: "/",
         name: "home",
         component: HomeComponent,
     },
 ];
 
 export const routes = baseRoutes.concat(
-    // homeRoutes,
+    frontendRoutes,
 );
 
 const router = createRouter({
